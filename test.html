@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Alec Foss Website</title>
+    <meta name="robots" content="noindex,follow,all">
+    <meta http-equiv="pragma" content="no-cache">
+    <script>
+        var tl = new Array(
+            `<a href="./cv/"><h1>CV (in progress)</h1></a>`,
+            "Nothing else to see here.",
+        );
+        var speed = 55;
+        var index = 0;
+        text_pos = 0;
+        var str_length = tl[0].length;
+        var contents, row;
+
+        function type_text() {
+            contents = '';
+            row = Math.max(0, index - 9);
+            while (row < index)
+                contents += tl[row++] + '\r\n';
+            document.error.error.value = contents + tl[index].substring(0, text_pos) + "_";
+            if (text_pos++ == str_length) {
+                text_pos = 0;
+                index++;
+                if (index != tl.length) {
+                    str_length = tl[index].length;
+                    setTimeout("type_text()", 850);
+                }
+            } else
+                setTimeout("type_text()", speed);
+
+        }
+        document.addEventListener('DOMContentLoaded', function () {
+            type_text();
+        });
+    </script>
+</head>
+
+<body>
+    <form name="error">
+        <textarea name="error" rows="3" cols="25" wrap="soft" class="input"></textarea>
+    </form>
+</body>
+
+</html>
