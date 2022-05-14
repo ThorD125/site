@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMagnifecentHomePage</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: sans-serif;
+            background-color: #3b3d3f;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        a {
+            display: block;
+            color: #fff;
+            text-align: justify;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            font-weight: 500;
+        }
+
+        div {
+            display: block;
+            margin: auto;
+            width: 75vw;
+            font-size: 3vw;
+            text-align: justify;
+            padding-top: 12.5vw;
+            line-height: 1.5;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 5vw;
+            height: fit-content;
+        }
+
+        /*Seriously? What part about 'nothing' don't you understand?*/
+    </style>
+    <script>
+        let speed = 55;
+
+        let i = 0;
+        let str = `Nothing to see here, except for these links 
+        Nothing to see here, except for these links`;
+
+        function customTypingText() {
+            document.querySelector('textarea').value += str.charAt(i);
+            i++;
+            if (i < str.length) {
+                setTimeout(customTypingText, speed);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            customTypingText();
+        });
+    </script>
+
+</head>
+
+<body>
+    <div>
+
+
+
+        <a href="./cv/">CV (in progress)</a>
+        <a href="./test.html">Testing</a>
+        <textarea name="textarea">
+    </div>
+</body>
+
+</html>

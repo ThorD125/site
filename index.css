@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #3b3d3f;
+  color: #fff;
+  overflow: hidden;
+}
+
+a {
+  display: block;
+  color: #fff;
+  text-align: justify;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+div {
+  display: block;
+  margin: auto;
+  width: 75vw;
+  font-size: 3vw;
+  text-align: justify;
+  padding-top: 12.5vw;
+  line-height: 1.5;
+}
+
+div * {
+  margin-bottom: 5vw;
+}
+
+textarea {
+  width: 100%;
+  padding: 1%;
+  resize: none;
+}
+
+textarea:focus-visible {
+  outline: none;
+}
+
+/* Seriously? What part about 'nothing' don't you understand? */
