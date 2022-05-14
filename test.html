@@ -1,11 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Testing</title>
-    <meta name="robots" content="noindex,follow,all">
-    <meta http-equiv="pragma" content="no-cache">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
     <script>
         var tl = new Array(
             `<a href="./cv/"><h1>CV (in progress)</h1></a>`,
@@ -37,12 +38,16 @@
         document.addEventListener('DOMContentLoaded', function () {
             type_text();
         });
+        document.querySelector('button').addEventListener('click', function () {
+            type_text();
+        });
     </script>
 </head>
 
 <body>
     <form name="error">
         <textarea name="error" rows="3" cols="25" wrap="soft" class="input"></textarea>
+        <button>rerun</button>
     </form>
 </body>
 
