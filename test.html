@@ -38,7 +38,8 @@
         document.addEventListener('DOMContentLoaded', function () {
             type_text();
         });
-        document.querySelector('button').addEventListener('click', function () {
+        document.querySelector('button').addEventListener('click', function (e) {
+            e.preventDefault();
             type_text();
         });
     </script>
